@@ -1,0 +1,251 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* OSNOVA */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: white;
+    padding: 15px 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+/* HERO (background slika) */
+header {
+    flex: 1;
+    background: url('fitness.jpg') no-repeat center/cover;
+    position: relative;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    color: white;
+    text-align: center;
+}
+
+/* HERO dugme */
+.overlay button {
+    padding: 12px 25px;
+    background: orange;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.overlay button:hover {
+    background: darkorange;
+    transform: scale(1.05);
+}
+
+/* SEKCIJE */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* KARTICE */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 25px;
+    width: 250px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* FORMA */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background: orange;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: darkorange;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* MODAL POZADINA */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0,0,0,0.7);
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* SADRŽAJ MODALA */
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+/* X dugme */
+#closeModal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -320px; /* sakriven */
+    width: 300px;
+    height: 100%;
+
+    background: black;
+    color: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+
+    padding: 20px;
+    transition: 0.4s;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* kada je otvoren */
+.sidebar.active {
+    right: 0;
+}
+
+/* X dugme */
+#closeSidebar {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* forma unutra */
+.sidebar form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar input {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.sidebar button {
+    background: orange;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background: darkorange;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

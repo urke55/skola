@@ -1,2 +1,85 @@
-<h1>Zdravo GitHub!</h1>
-<p>Ovo je moj prvi projekat</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav>
+        <h1>FitLife</h1>
+        <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="usluge.html">Usluge</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <header>
+            <div class="overlay">
+                <h2>Postani najbolja verzija sebe</h2>
+                <p>Treniraj pametno. Živi zdravo.</p>
+                <button id="openForm">Prijavi se</button>
+            </div>
+        </header>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <span id="closeModal">&times;</span>
+
+            <h2>Prijava</h2>
+
+            <form>
+                <input type="text" placeholder="Ime" required>
+                <input type="email" placeholder="Email" required>
+                <button type="submit">Pošalji</button>
+            </form>
+
+        </div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+
+        <span id="closeSidebar">&times;</span>
+
+        <h2>Prijava</h2>
+
+        <form>
+            <input type="text" placeholder="Ime" required>
+            <input type="email" placeholder="Email" required>
+            <button type="submit">Pošalji</button>
+        </form>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 FitLife Studio</p>
+    </footer>
+
+    <script>        
+        const openBtn = document.getElementById("openForm");
+        const sidebar = document.getElementById("sidebar");
+        const closeBtn = document.getElementById("closeSidebar");
+
+        // otvori sidebar
+        openBtn.onclick = function () {
+            sidebar.classList.add("active");
+        }
+
+        // zatvori sidebar
+        closeBtn.onclick = function () {
+            sidebar.classList.remove("active");
+        }
+    </script>
+</body>
+
+</html>
